@@ -1,0 +1,120 @@
+<div class="container-fluid">
+  
+  <div class="form-group form-row mt-5">
+    <label for="inputpesquisa" class="font-weight-bold">{{'INPUTPESQUISA.LABEL' | translate}}</label>
+    <input #inputpesquisa class="col-11 form-control"
+           type="text" placeholder="{{'INPUTPESQUISA.PLACEHOLDER' | translate}}" />
+    <button class="btn btn-dark btn-sm col-1"
+            (click)="obterCandidatos(1, inputpesquisa.value)">
+      <span class="material-icons">
+        search
+      </span>
+    </button>
+  </div>
+
+  <div class="m-auto text-center">
+    <i *ngIf="!candidatos else candnotfound">{{'CARREGANDO_CANDIDATOS' | translate}}</i>
+    <ng-template #candnotfound>
+      <i *ngIf="candidatos.length <= 0 else candidatoList">{{'CANDIDATO_VAZIO' | translate}}</i>
+    </ng-template>
+  </div>
+
+  <ng-template #candidatoList>
+    <div class=" justify-content-center">
+      <table id="tblCandidatos" class="table table-hover table-striped mt-5 mr-3">
+        <thead>
+          <tr class="row flex-row">
+            <th class="col-4" scope="col">{{'TABLE.HEADER.NOME' | translate}}</th>
+            <th class="col-4" scope="col">Email</th>
+            <th class="col-3" scope="col">{{'TABLE.HEADER.TELEFONE' | translate}}</th>
+            <th class="col-1" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="button" class="row" *ngFor="let item of candidatos | paginate:
+              {
+                itemsPerPage: queryParams.tamanhoPagina,
+                currentPage: queryParams.pagina,
+                totalItems: queryParams.totalRegistro
+              }">
+
+            <td class="col-4">{{item.nome}}</td>
+            <td class="col-4">{{item.email}}</td>
+            <td class="col-3">{{item.telefone}}</td>
+            <td class="col-1">
+
+              <div class="btn-group float-right">
+                <a id="btnOptions" role="button" data-offset="-200,0" data-toggle="dropdown">
+                  <i class="material-icons">more_vert</i>
+                </a>
+
+                <but class="dropdown-menu" data-offset="10">
+                  <a id="btnEditarCandidato" role="button" class="dropdown-item d-flex" data-toggle="modal"
+                     data-target="#modalCandidato" (click)="openModal(item)">
+
+                    <span class="material-icons mr-1">edit</span>
+                    <span>{{'TABLE.BODY.ACAO.EDITAR' | translate}}</span>
+                  </a>
+                  <a id="btnExcluirCandidato" role="button" class="dropdown-item d-flex" (click)="excluirCandidato(item.id)">
+                    <span class="material-icons mr-1">delete</span>
+                    <span>{{'TABLE.BODY.ACAO.EXCLUIR' | translate}}</span>
+                  </a>
+                </but>
+              </div>
+
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <pagination-controls (pageChange)="obterCandidatos($event)"
+                           responsive="true"
+                           nextLabel="{{'TABLE.PAGINACAO.PROXIMO' | translate}}"
+                           previousLabel="{{'TABLE.PAGINACAO.ANTERIOR' | translate}}"
+                           maxSize="6">
+      </pagination-controls>
+    </div>
+  </ng-template>
+
+  <ng-container *ngIf="open">
+    <div class="modal" id="modalCandidato">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header p-0">
+            <div class="card card-header col-12">
+              <!--header content-->
+              <!--btn fechar modal-->
+              <div role="button" class="close text-danger" (click)="closeModal()" data-dismiss="modal">x</div>
+
+              <div class="card-title text-body text-center">
+                <h1 class="h4">{{'MODAL.TITLE' | translate}}</h1>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-body p-0">
+            <div class="card card-body col-12">
+              <!--body content-->
+
+              <form-candidato text-submit="EDIT"
+                              (submit)="editarCandidato($event)"
+                              [candidato]="candidatoEdit">
+              </form-candidato>
+
+            </div>
+          </div>
+          <div class="modal-footer m-0 p-0">
+            <div class="card card-footer m-0 col-12">
+              <!--footer content-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ng-container>
+
+</div>

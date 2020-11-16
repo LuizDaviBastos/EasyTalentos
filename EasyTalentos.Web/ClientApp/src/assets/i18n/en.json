@@ -1,0 +1,96 @@
+{
+  "TITLE0": "Talent Bank",
+
+  "TITLE": {
+    "TITLE": "Talent Bank - Easy Communication & Technology (Developers)",
+    "SAUDACAO": "We appreciate your contact, check that you do not need to fill out the full form if already has this information on its linkedin, and check out the links at the end of the tutorials (developers).",
+    "LINK": "How we work"
+  },
+
+  "HEADER": {
+    "CADASTRO": "Register",
+    "GERENCIAR": "Manage Candidates"
+  },
+
+  "TABLE": {
+    "HEADER": {
+      "NOME": "Name",
+      "TELEFONE": "Phone"
+    },
+    "BODY": {
+      "ACAO": {
+        "EDITAR": "Edit information",
+        "EXCLUIR": "Delete"
+      }
+    },
+    "PAGINACAO": {
+      "PROXIMO": "Next",
+      "ANTERIOR": "Previous"
+    }
+  },
+  "INPUTPESQUISA": {
+    "PLACEHOLDER": "Search for email or name",
+    "LABEL": "Search candidates"
+  },
+  "CARREGANDO_CANDIDATOS": "Loading candidates...",
+  "CANDIDATO_VAZIO": "No candidate found",
+
+  "MODAL": {
+    "TITLE": "Edit candidate information"
+  },
+
+  "FRMCANDIDATO": {
+
+    "CANDIDATO": {
+      "NOME": "Name",
+      "EMAIL": "E-mail Adress",
+      "TELEFONE": "Phone (Whatsapp)",
+      "CIDADE": "City",
+      "ESTADO": "State",
+      "PRETENSAO": "What is your hourly salary requirements?"
+    },
+
+    "DISPONIBILIDADE": {
+      "TITLE": "What is your willingness to work today?",
+      "ATEQUATRO": "Up to 4 hours per day",
+      "QUATROASSEIS": "4 to 6 hours per day",
+      "SEISASOITO": "6 to 8 hours per day",
+      "ACIMADEOITO": "Up to 8 hours a day (are you sure?)",
+      "FINAISDESEMANA": "Only weekends"
+    },
+
+    "PREFERENCIA": {
+      "TITLE": "What's the best time to work for you?",
+      "MANHA": "Morning (from 08:00 to 12:00)",
+      "TARDE": "Afternoon (from 1:00 p.m. to 6:00 p.m.) ",
+      "NOITE": "Night (7:00 p.m. to 10:00 p.m.)",
+      "MADRUGADA": "Dawn (from 10 p.m. onwards)",
+      "COMERCIAL": "Business (from 08:00 a.m. to 06:00 p.m.)"
+    },
+
+    "CONHECIMENTO": {
+      "LABEL": "I don´t know",
+      "OUTRAS": "Do you know any other language or framework that was not listed above? Tell us and evaluate yourself from 0 to 5.",
+      "INFO": {
+        "INFO_ZERO": "Rate yourself from 0 to 5 for the knowledge specified below, and that's okay if you do not know many things, the important thing is to be honest!",
+        "INFO_UM": "Enter the link here CRUD (create, update, delete)- read information in the welcome document quoted in the form description.",
+
+        "INFO_DOIS": {
+          "TITLE": "Tutorials - Check out our tutorials and material explaining how the company works ",
+          "TEXTLINK": "click here"
+        }
+      }
+    },
+
+    "BTNSUBMIT": {
+      "SEND": "Send",
+      "ADD": "Register",
+      "EDIT": "Save changes"
+    },
+
+    "VALIDACAO": {
+      "REQUIRED": "Required"
+    }
+
+  }
+}

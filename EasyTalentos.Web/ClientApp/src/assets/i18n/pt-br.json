@@ -1,0 +1,96 @@
+{
+  "TITLE0": "Banco de Talentos",
+
+  "TITLE": {
+    "TITLE": "Banco de Talentos - Easy Communication & Technology (Desenvolvedores)",
+    "SAUDACAO": "Já agradecemos o seu contato, confira que você não precisa preencher o formulário completo caso já tenha essas informações no seu linkedin, e no final confira os links dos tutoriais (desenvolvedores).",
+    "LINK": "Como trabalhamos"
+  },
+
+  "HEADER": {
+    "CADASTRO": "Cadastrar",
+    "GERENCIAR": "Gerenciar Candidatos"
+  },
+
+  "TABLE": {
+    "HEADER": {
+      "NOME": "Nome",
+      "TELEFONE": "Telefone"
+    },
+    "BODY": {
+      "ACAO": {
+        "EDITAR": "Editar informações",
+        "EXCLUIR": "Excluir"
+      }
+    },
+    "PAGINACAO": {
+      "PROXIMO": "Próximo",
+      "ANTERIOR": "Anterior"
+    }
+  },
+
+  "INPUTPESQUISA": {
+    "PLACEHOLDER": "Pesquisa pelo email ou nome",
+    "LABEL": "Pesquisar candidatos"
+  },
+  "CARREGANDO_CANDIDATOS": "Carregando candidatos...",
+  "CANDIDATO_VAZIO": "Nenhum candidato encontrado",
+
+  "MODAL": {
+    "TITLE": "Editar informações do candidato"
+  },
+
+  "FRMCANDIDATO": {
+    "CANDIDATO": {
+      "NOME": "Nome",
+      "EMAIL": "Endereço de E-mail",
+      "TELEFONE": "Telefone (Whatsapp)",
+      "CIDADE": "Cidade",
+      "ESTADO": "Estado",
+      "PRETENSAO": "Qual sua pretensão salarial por hora?"
+    },
+
+    "DISPONIBILIDADE": {
+      "TITLE": "Qual é sua disponibilidade para trabalhar hoje?",
+      "ATEQUATRO": "Até 4 horas por dia",
+      "QUATROASSEIS": "De 4 á 6 horas por dia",
+      "SEISASOITO": "De 6 á 8 horas por dia",
+      "ACIMADEOITO": "Acima de 8 horas por dia (tem certeza?)",
+      "FINAISDESEMANA": "Apenas finais de semana"
+
+    },
+
+    "PREFERENCIA": {
+      "TITLE": "Pra você qual é o melhor horário para trabalhar?",
+      "MANHA": "Manhã (de 08:00 ás 12:00)",
+      "TARDE": "Tarde (de 13:00 ás 18:00)",
+      "NOITE": "Noite (de 19:00 as 22:00)",
+      "MADRUGADA": "Madrugada (de 22:00 em diante)",
+      "COMERCIAL": "Comercial (de 08:00 as 18:00)"
+    },
+
+    "CONHECIMENTO": {
+      "LABEL": "Não conheço",
+      "OUTRAS": "Conhece mais alguma linguagem ou framework que não foi listado aqui em cima? Conte para nos e se auto avalie ainda de 0 a 5.",
+      "INFO": {
+        "INFO_ZERO": "Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber de muitas coisas, o importante é que seja sincero!",
+        "INFO_UM": "Insira aqui o link do CRUD (create, update, delete)- ler informações no documento de Boas Vindas citado na descrição do formulário.",
+
+        "INFO_DOIS": {
+          "TITLE": "Confira nossos tutoriais e material explicando como a empresa funciona",
+          "TEXTLINK": "clique Aqui"
+        }
+      }
+    },
+
+    "BTNSUBMIT": {
+      "SEND": "Enviar",
+      "ADD": "Cadastrar",
+      "EDIT": "Salvar alterações"
+    },
+
+    "VALIDACAO": {
+      "REQUIRED": "Obrigatório"
+    }
+  }
+}

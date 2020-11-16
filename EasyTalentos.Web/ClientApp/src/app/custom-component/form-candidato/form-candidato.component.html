@@ -1,0 +1,302 @@
+<form #frmCandidato="ngForm" class="col-12">
+
+  <!--Candidato-->
+  <div class="form-group">
+    <label for="inputNome">{{'FRMCANDIDATO.CANDIDATO.NOME' | translate}}</label>
+    <input [(ngModel)]="candidato.nome" id="inputNome" name="nome"
+           class="form-control" #nome="ngModel" type="text" required />
+    <div class="d-block invalid-feedback">
+      <div *ngIf="nome.invalid">{{'FRMCANDIDATO.VALIDACAO.REQUIRED' | translate}}</div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-12 col-md-7">
+      <label for="inputEmail">{{'FRMCANDIDATO.CANDIDATO.EMAIL' | translate}}</label>
+      <input  [(ngModel)]="candidato.email" name="email" id="inputEmail"
+             class="form-control" #email="ngModel" type="email" required />
+      <div class="d-block invalid-feedback">
+        <div *ngIf="email.invalid">{{'FRMCANDIDATO.VALIDACAO.REQUIRED' | translate}}</div>
+      </div>
+    </div>
+
+    <div class="form-group col-12 col-md-5">
+      <label for="inputTelefone">{{'FRMCANDIDATO.CANDIDATO.TELEFONE' | translate}}</label>
+      <input [(ngModel)]="candidato.telefone" name="telefone" id="inputTelefone"
+             class="form-control" #telefone="ngModel" type="tel" required />
+      <div class="d-block invalid-feedback">
+        <div *ngIf="telefone.invalid">{{'FRMCANDIDATO.VALIDACAO.REQUIRED' | translate}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputLinkedin">Linkedin</label>
+    <input [(ngModel)]="candidato.linkedin" name="linkedin" id="inputLinkedin"
+           class="form-control" type="text" />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-12 col-md-6 col-lg-6">
+      <label for="inputCidade">{{'FRMCANDIDATO.CANDIDATO.CIDADE' | translate}}</label>
+      <input [(ngModel)]="candidato.cidade" name="cidade" id="inputCidade"
+             class="form-control" #cidade="ngModel" type="text" required />
+      <div class="d-block invalid-feedback">
+        <div *ngIf="cidade.invalid">{{'FRMCANDIDATO.VALIDACAO.REQUIRED' | translate}}</div>
+      </div>
+    </div>
+
+    <div class="form-group col-12 col-md-6 col-lg-6">
+      <label for="inputEstado">{{'FRMCANDIDATO.CANDIDATO.ESTADO' | translate}}</label>
+      <input [(ngModel)]="candidato.estado" name="estado" id="inputEstado"
+             class="form-control" #estado="ngModel" type="text" required />
+      <div class="d-block invalid-feedback">
+        <div *ngIf="estado.invalid">{{'FRMCANDIDATO.VALIDACAO.REQUIRED' | translate}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPortfolio">Portfolio</label>
+    <input [(ngModel)]="candidato.portfolio" name="portfolio" id="inputPortfolio"
+           class="form-control" type="text" />
+  </div>
+
+  <hr class="mb-5" />
+
+  <!--Disponibilidade-->
+  <div class="form-group ">
+    <h1 class="h5 mb-3">{{'FRMCANDIDATO.DISPONIBILIDADE.TITLE' | translate}}</h1>
+
+    <div class="form-group">
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.disponibilidade.ateQuatro"
+               name="ateQuatro"
+               type="checkbox"
+               id="inputateQuatro"
+               class="custom-control-input" />
+
+        <label id="lblinputateQuatro" class="custom-control-label" for="inputateQuatro">
+          {{'FRMCANDIDATO.DISPONIBILIDADE.ATEQUATRO' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.disponibilidade.quatroAteSeis"
+               type="checkbox"
+               id="inputQuatroAteSeis"
+               name="quatroAteSeis"
+               class="custom-control-input">
+
+        <label id="lblinputQuatroAteSeis" class="custom-control-label" for="inputQuatroAteSeis">
+          {{'FRMCANDIDATO.DISPONIBILIDADE.QUATROASSEIS' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.disponibilidade.seisAteOito"
+               type="checkbox"
+               id="inputSeisAteOito"
+               name="seisAteOito"
+               class="custom-control-input">
+
+        <label id="lblinputSeisAteOito" class="custom-control-label" for="inputSeisAteOito">
+          {{'FRMCANDIDATO.DISPONIBILIDADE.SEISASOITO' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.disponibilidade.acimaDeOito"
+               type="checkbox"
+               id="inputAcimaDeOito"
+               name="acimaDeOito"
+               class="custom-control-input">
+
+        <label id="lblinputAcimaDeOito" class="custom-control-label" for="inputAcimaDeOito">
+          {{'FRMCANDIDATO.DISPONIBILIDADE.ACIMADEOITO' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.disponibilidade.finaisDeSemana"
+               type="checkbox"
+               id="inputFinaisDeSemana"
+               name="finaisDeSemana"
+               class="custom-control-input">
+
+        <label id="lblinputFinaisDeSemana" class="custom-control-label" for="inputFinaisDeSemana">
+          {{'FRMCANDIDATO.DISPONIBILIDADE.FINAISDESEMANA' | translate}}
+        </label>
+      </div>
+
+    </div>
+  </div>
+  <!--Disponibilidade Fim-->
+
+  <hr class="mb-5" />
+
+  <!--Preferência-->
+  <div class="form-group ">
+    <h1 class="h5 mb-3">{{'FRMCANDIDATO.PREFERENCIA.TITLE' | translate}}</h1>
+
+    <div class="form-group">
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.preferencia.manha"
+               type="checkbox"
+               id="inputManha"
+               name="manha"
+               class="custom-control-input">
+
+        <label id="lblinputManha" class="custom-control-label" for="inputManha">
+          {{'FRMCANDIDATO.PREFERENCIA.MANHA' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.preferencia.tarde"
+               type="checkbox"
+               id="inputTarde"
+               name="tarde"
+               class="custom-control-input">
+
+        <label id="lblinputTarde" class="custom-control-label" for="inputTarde">
+          {{'FRMCANDIDATO.PREFERENCIA.TARDE' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.preferencia.noite"
+               type="checkbox"
+               id="inputNoite"
+               name="noite"
+               class="custom-control-input">
+
+        <label id="lblinputNoite" class="custom-control-label" for="inputNoite">
+          {{'FRMCANDIDATO.PREFERENCIA.NOITE' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.preferencia.madrugada"
+               type="checkbox"
+               id="inputMadrugada"
+               name="madrugada"
+               class="custom-control-input">
+
+        <label id="lblinputMadrugada" class="custom-control-label" for="inputMadrugada">
+          {{'FRMCANDIDATO.PREFERENCIA.MADRUGADA' | translate}}
+        </label>
+      </div>
+      <div class="custom-control custom-checkbox mb-1">
+        <input [(ngModel)]="candidato.preferencia.comercial"
+               type="checkbox"
+               id="inputComercial"
+               name="comercial"
+               class="custom-control-input">
+
+        <label id="lblinputComercial" class="custom-control-label" for="inputComercial">
+          {{'FRMCANDIDATO.PREFERENCIA.COMERCIAL' | translate}}
+        </label>
+      </div>
+
+    </div>
+  </div>
+  <!--Preferência Fim-->
+  <hr class="mb-5" />
+
+
+  <div class="form-group">
+
+    <label class="h5" for="inputPretencaoSalarial">
+      {{'FRMCANDIDATO.CANDIDATO.PRETENSAO' | translate}}
+    </label>
+    <input [(ngModel)]="candidato.pretencaoSalario" name="pretencaoSalario" id="inputPretencaoSalarial"
+           class="form-control" #pretencao="ngModel" type="number" required />
+    <div class="d-block invalid-feedback">
+      <div *ngIf="pretencao.invalid">{{'FRMCANDIDATO.VALIDACAO.REQUIRED' | translate}}</div>
+    </div>
+  </div>
+
+  <!--Candidato Fim-->
+
+  <hr class="mb-5" />
+
+  <!--Conhecimento-->
+  <div class="form-group">
+    <h1 class="h5 mb-4">{{'FRMCANDIDATO.CONHECIMENTO.INFO.INFO_ZERO' | translate}}</h1>
+
+    <div *ngFor="let propConhecimento of properties">
+
+      <div class="form-group card card-body mb-1 text-center">
+        <label class="text-left d-block mb-3 font-weight-bold">
+          {{propConhecimento | titulo | titlecase }} <span class="text-danger font-weight-bold">*</span>
+        </label>
+
+        <div class="m-auto d-inline-flex">
+          <div class="pr-3">{{'FRMCANDIDATO.CONHECIMENTO.LABEL' | translate}}</div>
+          <div>
+            <div class="custom-control custom-radio custom-control-inline"
+                 *ngFor="let item of [].constructor(6); let i = index">
+
+              <input type="radio"
+                     [value]="i"
+                     [(ngModel)]="candidato['conhecimento'][propConhecimento]"
+                     id="{{propConhecimento + i}}"
+                     name="{{propConhecimento}}"
+                     class="custom-control-input"
+                     required />
+
+              <label id="{{'lbl'+propConhecimento+i}}" class="custom-control-label" for="{{propConhecimento + i}}">{{i}}</label>
+            </div>
+
+          </div>
+
+          <div class="pl-3">Senior</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mb-5" />
+
+    <div class="form-group">
+      <label class="font-weight-bold font" for="idOutras">
+        {{'FRMCANDIDATO.CONHECIMENTO.OUTRAS' | translate}}
+      </label>
+      <input [(ngModel)]="candidato['conhecimento'].outras"
+             name="outras"
+             id="idOutras"
+             class="form-control"
+             type="text" />
+    </div>
+    <hr class="mb-5" />
+
+    <div class="card card-body mb-1">
+      <label class="mb-3 font-weight-bold">
+        {{'FRMCANDIDATO.CONHECIMENTO.INFO.INFO_UM' | translate}}
+      </label>
+    </div>
+
+    <div class="card card-body mb-4">
+      <label class="mb-3 font-weight-bold">
+        {{'FRMCANDIDATO.CONHECIMENTO.INFO.INFO_DOIS.TITLE' | translate}}
+      </label>
+      <a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM">
+        {{'FRMCANDIDATO.CONHECIMENTO.INFO.INFO_DOIS.TEXTLINK' | translate}}
+      </a>
+    </div>
+
+    <div class="form-group mb-1">
+      <label class="font-weight-bold font" for="idlinkCrud">Link CRUD</label>
+      <input [(ngModel)]="candidato.conhecimento.linkCrud"
+             name="linkCrud"
+             id="idlinkCrud"
+             class="form-control"
+             type="text" />
+    </div>
+
+  </div>
+  <!--Conhecimento Fim-->
+
+</form>
+
+<div class="text-center">
+  <button id="submit" [disabled]="!frmCandidato.valid" class="btn btn-primary col-12 col-md-6 col-lg-4" (click)="submit()">
+    <div *ngIf="candidatoContexto == 'SEND'">{{'FRMCANDIDATO.BTNSUBMIT.SEND' | translate}}</div>
+    <div *ngIf="candidatoContexto == 'ADD'">{{'FRMCANDIDATO.BTNSUBMIT.ADD' | translate}}</div>
+    <div *ngIf="candidatoContexto == 'EDIT'">{{'FRMCANDIDATO.BTNSUBMIT.EDIT' | translate}}</div>
+  </button>
+</div>
+

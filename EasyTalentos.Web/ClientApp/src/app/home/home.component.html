@@ -1,0 +1,34 @@
+
+<div class="m-auto pl-1 pr-1 col-12 col-md-12 col-lg-10 m-auto">
+  <div class="card card-header p-5">
+    <div class="card-title h4 text-left">
+      {{'TITLE.TITLE' | translate}}
+    </div>
+
+    <div class="text-left mt-3">
+
+      <a href="https://www.youtube.com/watch?v=Q4UA8oate_I">
+        {{'FRMCANDIDATO.CONHECIMENTO.INFO.INFO_DOIS.TEXTLINK' | translate | titlecase}}
+      </a>
+
+      <p>{{'TITLE.SAUDACAO' | translate}}</p>
+
+      <p>
+        {{'TITLE.LINK' | translate}}:
+        <a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM">
+          {{'FRMCANDIDATO.CONHECIMENTO.INFO.INFO_DOIS.TEXTLINK' | translate}}
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="card card-body">
+
+    <form-candidato [candidato]="candidato"
+                    text-submit="SEND"
+                    (submit)="cadastrar($event)">
+    </form-candidato>
+  </div>
+</div>
+
